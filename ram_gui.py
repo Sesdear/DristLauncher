@@ -23,6 +23,7 @@ class Ui_RamFrame(object):
         self.widget.setObjectName("widget")
         self.RamSlider = QtWidgets.QSlider(parent=self.widget)
         self.RamSlider.setGeometry(QtCore.QRect(10, 10, 361, 21))
+        self.RamSlider.setSingleStep(100)
         self.RamSlider.setOrientation(QtCore.Qt.Orientation.Horizontal)
         self.RamSlider.setObjectName("RamSlider")
         self.widget_2 = QtWidgets.QWidget(parent=RamFrame)
@@ -39,6 +40,9 @@ class Ui_RamFrame(object):
         self.RamEditLine.setGeometry(QtCore.QRect(40, 11, 71, 31))
         self.RamEditLine.setStyleSheet("background-color:rgb(202, 125, 0)")
         self.RamEditLine.setObjectName("RamEditLine")
+        self.pushButton = QtWidgets.QPushButton(parent=RamFrame)
+        self.pushButton.setGeometry(QtCore.QRect(274, 60, 101, 24))
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(RamFrame)
         QtCore.QMetaObject.connectSlotsByName(RamFrame)
@@ -48,3 +52,4 @@ class Ui_RamFrame(object):
         RamFrame.setWindowTitle(_translate("RamFrame", "Ram Edit"))
         self.label.setText(_translate("RamFrame", "RAM:"))
         self.RamEditLine.setText(_translate("RamFrame", "6000"))
+        self.pushButton.setText(_translate("RamFrame", "Apply"))

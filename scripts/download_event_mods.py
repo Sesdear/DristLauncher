@@ -4,11 +4,13 @@ import zipfile
 import shutil
 
 def download_and_update_mods():
+    # Подключение к репозиторию
     source_folder = 'minecraft_event/mods/Drist_Sources-Event_Data/'
     destination_folder = 'minecraft_event/mods'
 
     repo_url = 'https://codeload.github.com/Sesdear/Drist_Sources/zip/refs/heads/Event_Data'
     destination_folder_parent = 'minecraft_event/'
+    #__________________________________________________________
 
     if not os.path.exists(destination_folder_parent):
         os.makedirs(destination_folder_parent)

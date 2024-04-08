@@ -10,7 +10,7 @@ def dristButton_click():
     url = "https://chocolate-elenore-53.tiiny.site/"
     response = requests.get(url)
 
-
+    #Чтение версии сборки с сайта
     html_doc = response.text
     soup = BeautifulSoup(html_doc, 'html.parser')
     version_element = soup.find('p', class_='dristpunk_version')
