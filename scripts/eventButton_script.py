@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from scripts.download_event_mods import download_and_update_mods
+from scripts.download_event_req import download_and_update_mods
 import requests
 import json
 
@@ -25,7 +25,7 @@ def eventButton_click():
     if version_on_website == version_on_client:
         pass
     else:
-        #Update / download mods
+        #Update / download
 
         download_and_update_mods()
         #Write new version in json
@@ -40,8 +40,8 @@ def eventButton_click():
 
     #Debug code
 
-    print('Version on client',version_on_client)
-    print("Version on web", version_on_website)
+    print('Version on client: ',version_on_client)
+    print("Version on web: ", version_on_website)
 
 
 

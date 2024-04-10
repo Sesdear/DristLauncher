@@ -32,13 +32,13 @@ folder_path_data = 'data/'
 json_file_path_event = os.path.join(folder_path_event, 'info.json')
 if not os.path.exists(json_file_path_event):
     with open(json_file_path_event, 'w') as f:
-        json.dump({"version": 0, "minecraft_version": 0, "forge_version": 0}, f, indent=4)
+        json.dump({"version": 0}, f, indent=4)
 
 # Dristpunk info.json create
 json_file_path_dristpunk = os.path.join(folder_path_dristpunk, 'info.json')
 if not os.path.exists(json_file_path_dristpunk):
     with open(json_file_path_dristpunk, 'w') as f:
-        json.dump({"version": 0, "minecraft_version": 0, "forge_version": 0}, f, indent=4)
+        json.dump({"version": 0}, f, indent=4)
 
 # nickname.json create
 json_file_path_nickname = os.path.join(folder_path_data, 'nickname.json')
