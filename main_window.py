@@ -2,6 +2,7 @@
 import sys
 import json
 
+from PyQt6.QtCore import Qt, QTimer
 from PyQt6.QtWidgets import QApplication, QFrame
 from gui import Ui_Frame
 
@@ -9,6 +10,7 @@ from eventButton_script import eventButton_click
 from folderButton_sctipt import folder_open
 from ram_window import Ram_Window
 from generate_cracked_uuid import generate_cracked_uid
+from dristpunckButton_script import dristpunkButton_click
 
 
 class Window(QFrame):
@@ -21,7 +23,9 @@ class Window(QFrame):
 
         self.ram_window = None
 
+
         print("\nButton laod status: in progress")
+        self.ui.Dristpunk_Button.clicked.connect(dristpunkButton_click)
         self.ui.Folder_Button.clicked.connect(folder_open)
         self.ui.Event_Button.clicked.connect(eventButton_click)
         self.ui.RamButton.clicked.connect(self.ram_window_open)
@@ -32,8 +36,6 @@ class Window(QFrame):
         with open ('data/nickname.json', 'r') as f:
             nickname_value = json.load(f)
         self.ui.nicknameEdit.setText(nickname_value["User-info"][0]["username"])\
-
-
 
     def ram_window_open(self):
         print("Open ram_window")

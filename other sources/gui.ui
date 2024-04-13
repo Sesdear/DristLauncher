@@ -43,7 +43,7 @@
    <property name="minimumSize">
     <size>
      <width>599</width>
-     <height>334</height>
+     <height>332</height>
     </size>
    </property>
    <property name="maximumSize">
@@ -150,7 +150,7 @@ QPushButton:hover {
      <rect>
       <x>242</x>
       <y>160</y>
-      <width>121</width>
+      <width>111</width>
       <height>22</height>
      </rect>
     </property>
@@ -190,6 +190,17 @@ color:rgb(255, 255, 255)</string>
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgb(129, 80, 0);
+	border-radius:10px
+}
+
+QPushButton:hover {
+	background-color:rgb(162, 100, 0);
+}
+</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -207,9 +218,9 @@ color:rgb(255, 255, 255)</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>18</x>
-      <y>9</y>
-      <width>571</width>
+      <x>10</x>
+      <y>20</y>
+      <width>581</width>
       <height>61</height>
      </rect>
     </property>
@@ -241,25 +252,6 @@ color:rgb(255, 255, 255)</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
-    <widget class="QPushButton" name="ApplyNicknameButton">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>3</y>
-       <width>81</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>ascii</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Ok</string>
-     </property>
-    </widget>
    </widget>
    <widget class="QPushButton" name="RamButton">
     <property name="geometry">
@@ -293,6 +285,35 @@ QPushButton:hover {
       <width>35</width>
       <height>35</height>
      </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ApplyNicknameButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>160</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>ascii</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(255, 255, 255);
+}
+
+QPushButton:hover {
+	background-color:rgb(139, 139, 139);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Ok</string>
     </property>
    </widget>
   </widget>
