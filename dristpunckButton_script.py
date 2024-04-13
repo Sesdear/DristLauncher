@@ -1,10 +1,10 @@
 from bs4 import BeautifulSoup
-from download_event_req import download_and_update_mods, minecraft_download_event
+from download_dristpunck_req import download_and_update_mods, minecraft_download_dristpunk
 import requests
 import json
-from minecraft_launch import start_minecraft_event
+from minecraft_launch import start_minecraft_dristpunk
 
-def eventButton_click():
+def dristpunkButton_click():
     # URL для проверки версии сборки
     url = "https://chocolate-elenore-53.tiiny.site/"
 
@@ -16,12 +16,12 @@ def eventButton_click():
 
         # Парсинг HTML-документа для получения версии сборки
         soup = BeautifulSoup(response.text, 'html.parser')
-        version_element = soup.find('p', class_='event_version')
+        version_element = soup.find('p', class_='dristpunk_version')
         version_on_website = version_element.get_text()
         print("Read Website status: Done")
 
         print("\nRead ver on client status: in progress")
-        with open('minecraft_event/info.json', 'r', encoding='utf-8') as f:
+        with open('minecraft_dristpunk/info.json', 'r', encoding='utf-8') as f:
             data1 = json.load(f)
         version_on_client = data1["version"]
         print('Read ver on client status: Done')
@@ -38,17 +38,17 @@ def eventButton_click():
             print("Mods download status: Done")
 
             print("\nMinecraft download status: in progress")
-            minecraft_download_event()
+            minecraft_download_dristpunk()
             print("Minecraft download: Done")
             # Обновление версии в локальном JSON-файле
             data1["version"] = version_on_website
-            with open('minecraft_event/info.json', 'w', encoding='utf-8') as f:
+            with open('minecraft_dristpunk/info.json', 'w', encoding='utf-8') as f:
                 json.dump(data1, f, ensure_ascii=False, indent=4)
 
             print(4)
         # Отладочный вывод
         print("\n \n Start Check Minecraft Download")
-        start_minecraft_event()
+        start_minecraft_dristpunk()
 
     except requests.exceptions.RequestException as e:
         # Обработка исключения при ошибке запроса
@@ -57,5 +57,5 @@ def eventButton_click():
         # Обработка других исключений
         print('Error:', e)
 
-# Вызов функции при нажатии на кнопку
+
 

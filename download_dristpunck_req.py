@@ -8,13 +8,13 @@ import time
 def download_and_update_mods():
     def download_and_update():
         # Ваша функция download_and_update_mods()
-        source_folder = 'minecraft_event/mods/Drist_Sources-Event_Data/'
-        destination_folder = 'minecraft_event/mods'
+        source_folder = 'minecraft_dristpunk/mods/Drist_Sources-Dristpunk_Data/'
+        destination_folder = 'minecraft_dristpunk/mods'
 
         print(f"\nDownload mods from Github status: in progress (files path: {destination_folder}")
 
-        repo_url = 'https://codeload.github.com/Sesdear/Drist_Sources/zip/refs/heads/Event_Data'
-        destination_folder_parent = 'minecraft_event/'
+        repo_url = 'https://codeload.github.com/Sesdear/Drist_Sources/zip/refs/heads/Dristpunk_Data'
+        destination_folder_parent = 'minecraft_dristpunk/'
 
         if not os.path.exists(destination_folder_parent):
             os.makedirs(destination_folder_parent)
@@ -52,16 +52,15 @@ def download_and_update_mods():
     mods_thread.join()
     time.sleep(5)
 
-def minecraft_download_event():
+def minecraft_download_dristpunk():
     def minecraft_download():
-        # Ваша функция minecraft_download_event()
-        source_folder = 'minecraft_event/Drist_Sources-Event_Minecraft/'
-        destination_folder = 'minecraft_event/'
+        source_folder = 'minecraft_dristpunk/Drist_Sources-Dristpunk_Minecraft/'
+        destination_folder = 'minecraft_dristpunk/'
 
         print(f"\nDownload minecraft from github status: in progress (files path: {destination_folder}")
 
-        repo_url = 'https://codeload.github.com/Sesdear/Drist_Sources/zip/refs/heads/Event_Minecraft'
-        destination_folder_parent = 'minecraft_event/'
+        repo_url = 'https://codeload.github.com/Sesdear/Drist_Sources/zip/refs/heads/Dristpunk_Minecraft'
+        destination_folder_parent = 'minecraft_dristpunk/'
 
         if not os.path.exists(destination_folder_parent):
             os.makedirs(destination_folder_parent)
@@ -84,8 +83,6 @@ def minecraft_download_event():
             print(f"Moving {source_file_path} to {destination_file_path}")
             shutil.move(source_file_path, destination_file_path)
         print("Download minecraft from github status: Done")
-
-
         try:
             print("\nDelete Temp minecraft files status: in progress")
             folder_path = source_folder

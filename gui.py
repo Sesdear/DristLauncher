@@ -19,7 +19,7 @@ class Ui_Frame(object):
         Frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame = QtWidgets.QFrame(parent=Frame)
         self.frame.setGeometry(QtCore.QRect(0, 0, 599, 334))
-        self.frame.setMinimumSize(QtCore.QSize(599, 334))
+        self.frame.setMinimumSize(QtCore.QSize(599, 332))
         self.frame.setMaximumSize(QtCore.QSize(599, 334))
         self.frame.setStyleSheet("QFrame{ \n"
 "    background-color:rgb(108, 67, 0);\n"
@@ -62,7 +62,7 @@ class Ui_Frame(object):
 "}")
         self.Dristpunk_Button.setObjectName("Dristpunk_Button")
         self.nicknameEdit = QtWidgets.QLineEdit(parent=self.frame)
-        self.nicknameEdit.setGeometry(QtCore.QRect(242, 160, 121, 22))
+        self.nicknameEdit.setGeometry(QtCore.QRect(242, 160, 111, 22))
         self.nicknameEdit.setStyleSheet("background-color:rgb(0, 0, 0);\n"
 "color:rgb(255, 255, 255)")
         self.nicknameEdit.setObjectName("nicknameEdit")
@@ -76,6 +76,15 @@ class Ui_Frame(object):
         self.label.setObjectName("label")
         self.Folder_Button = QtWidgets.QPushButton(parent=self.frame)
         self.Folder_Button.setGeometry(QtCore.QRect(544, 283, 41, 41))
+        self.Folder_Button.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(129, 80, 0);\n"
+"    border-radius:10px\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color:rgb(162, 100, 0);\n"
+"}\n"
+"")
         self.Folder_Button.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("folder.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -83,7 +92,7 @@ class Ui_Frame(object):
         self.Folder_Button.setIconSize(QtCore.QSize(25, 25))
         self.Folder_Button.setObjectName("Folder_Button")
         self.label_2 = QtWidgets.QLabel(parent=self.frame)
-        self.label_2.setGeometry(QtCore.QRect(18, 9, 571, 61))
+        self.label_2.setGeometry(QtCore.QRect(10, 20, 581, 61))
         font = QtGui.QFont()
         font.setFamily("ascii")
         font.setPointSize(28)
@@ -95,13 +104,6 @@ class Ui_Frame(object):
         self.widget.setGeometry(QtCore.QRect(260, 187, 81, 81))
         self.widget.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.widget.setObjectName("widget")
-        self.ApplyNicknameButton = QtWidgets.QPushButton(parent=self.widget)
-        self.ApplyNicknameButton.setGeometry(QtCore.QRect(0, 3, 81, 81))
-        font = QtGui.QFont()
-        font.setFamily("ascii")
-        font.setPointSize(12)
-        self.ApplyNicknameButton.setFont(font)
-        self.ApplyNicknameButton.setObjectName("ApplyNicknameButton")
         self.RamButton = QtWidgets.QPushButton(parent=self.frame)
         self.RamButton.setGeometry(QtCore.QRect(14, 283, 41, 41))
         self.RamButton.setStyleSheet("QPushButton{\n"
@@ -119,6 +121,21 @@ class Ui_Frame(object):
         self.RamButton.setIcon(icon1)
         self.RamButton.setIconSize(QtCore.QSize(35, 35))
         self.RamButton.setObjectName("RamButton")
+        self.ApplyNicknameButton = QtWidgets.QPushButton(parent=self.frame)
+        self.ApplyNicknameButton.setGeometry(QtCore.QRect(360, 160, 21, 21))
+        font = QtGui.QFont()
+        font.setFamily("ascii")
+        font.setPointSize(10)
+        self.ApplyNicknameButton.setFont(font)
+        self.ApplyNicknameButton.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color:rgb(139, 139, 139);\n"
+"}\n"
+"")
+        self.ApplyNicknameButton.setObjectName("ApplyNicknameButton")
 
         self.retranslateUi(Frame)
         QtCore.QMetaObject.connectSlotsByName(Frame)

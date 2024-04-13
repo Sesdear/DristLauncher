@@ -1,13 +1,43 @@
 import json
 import os
+import shutil
 import sys
+import zipfile
+
 from main_window import Window
 from PyQt6.QtWidgets import QApplication
+import requests
 
+repo_url = 'https://codeload.github.com/Sesdear/Drist_Sources/zip/refs/heads/Icons'
+destination_folder_parent = '.'
+source_folder = 'icons/Drist_Sources-Icons/'
+destination_folder = '.'
 
-with open('error_log.txt', 'w') as f:
-    sys.stderr = f
-sys.stderr = sys.__stderr__
+destination = os.path.join(destination_folder_parent, 'icons.zip')
+response = requests.get(repo_url, stream=True)
+with open(destination, 'wb') as f:
+    f.write(response.content)
+
+extracted_folder_path = os.path.join(destination_folder_parent, 'icons')
+with zipfile.ZipFile(destination, 'r') as zip_ref:
+    zip_ref.extractall(extracted_folder_path)
+
+for filename in os.listdir(source_folder):
+    source_file_path = os.path.join(source_folder, filename)
+    destination_file_path = os.path.join(destination_folder, filename)
+    print(f"Moving {source_file_path} to {destination_file_path}")
+    shutil.move(source_file_path, destination_file_path)
+print("Download mods from github status: Done")
+
+try:
+    print("\nDelete Temp mods files status: in progress")
+    folder_path = 'icons'
+    file_path = destination
+    os.remove(file_path)
+    shutil.rmtree(folder_path)
+    print("Delete Temp files status: Done")
+except Exception as e:
+    print(f"Error while deleting temp files: {e}")
 #_______________________________________________________________
 # Создание папок
 
