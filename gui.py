@@ -12,15 +12,15 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Frame(object):
     def setupUi(self, Frame):
         Frame.setObjectName("Frame")
-        Frame.resize(599, 334)
-        Frame.setMinimumSize(QtCore.QSize(599, 334))
-        Frame.setMaximumSize(QtCore.QSize(599, 334))
+        Frame.resize(599, 332)
+        Frame.setMinimumSize(QtCore.QSize(599, 332))
+        Frame.setMaximumSize(QtCore.QSize(599, 332))
         Frame.setStyleSheet("border:none")
         Frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame = QtWidgets.QFrame(parent=Frame)
-        self.frame.setGeometry(QtCore.QRect(0, 0, 599, 334))
+        self.frame.setGeometry(QtCore.QRect(0, 0, 599, 332))
         self.frame.setMinimumSize(QtCore.QSize(599, 332))
-        self.frame.setMaximumSize(QtCore.QSize(599, 334))
+        self.frame.setMaximumSize(QtCore.QSize(599, 332))
         self.frame.setStyleSheet("QFrame{ \n"
 "    background-color:rgb(108, 67, 0);\n"
 "}")
@@ -87,19 +87,10 @@ class Ui_Frame(object):
 "")
         self.Folder_Button.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("folder.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("other sources/folder.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.Folder_Button.setIcon(icon)
         self.Folder_Button.setIconSize(QtCore.QSize(25, 25))
         self.Folder_Button.setObjectName("Folder_Button")
-        self.label_2 = QtWidgets.QLabel(parent=self.frame)
-        self.label_2.setGeometry(QtCore.QRect(10, 20, 581, 61))
-        font = QtGui.QFont()
-        font.setFamily("ascii")
-        font.setPointSize(28)
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet("color:rgb(255, 255, 255)")
-        self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_2.setObjectName("label_2")
         self.widget = QtWidgets.QWidget(parent=self.frame)
         self.widget.setGeometry(QtCore.QRect(260, 187, 81, 81))
         self.widget.setStyleSheet("background-color: rgb(255, 255, 255);")
@@ -136,6 +127,121 @@ class Ui_Frame(object):
 "}\n"
 "")
         self.ApplyNicknameButton.setObjectName("ApplyNicknameButton")
+        self.UpdateAllEvent_Button = QtWidgets.QPushButton(parent=self.frame)
+        self.UpdateAllEvent_Button.setGeometry(QtCore.QRect(90, 220, 131, 21))
+        self.UpdateAllEvent_Button.setMinimumSize(QtCore.QSize(0, 0))
+        self.UpdateAllEvent_Button.setMaximumSize(QtCore.QSize(99999, 9999))
+        font = QtGui.QFont()
+        font.setFamily("ascii")
+        font.setPointSize(12)
+        self.UpdateAllEvent_Button.setFont(font)
+        self.UpdateAllEvent_Button.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(129, 80, 0);\n"
+"    border-radius:10px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color:rgb(162, 100, 0);\n"
+"}")
+        self.UpdateAllEvent_Button.setObjectName("UpdateAllEvent_Button")
+        self.UpdateModsEvent_Button = QtWidgets.QPushButton(parent=self.frame)
+        self.UpdateModsEvent_Button.setGeometry(QtCore.QRect(90, 250, 131, 21))
+        self.UpdateModsEvent_Button.setMinimumSize(QtCore.QSize(0, 0))
+        self.UpdateModsEvent_Button.setMaximumSize(QtCore.QSize(99999, 9999))
+        font = QtGui.QFont()
+        font.setFamily("ascii")
+        font.setPointSize(12)
+        self.UpdateModsEvent_Button.setFont(font)
+        self.UpdateModsEvent_Button.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(129, 80, 0);\n"
+"    border-radius:10px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color:rgb(162, 100, 0);\n"
+"}")
+        self.UpdateModsEvent_Button.setObjectName("UpdateModsEvent_Button")
+        self.UpdateAllDristpunk_Button = QtWidgets.QPushButton(parent=self.frame)
+        self.UpdateAllDristpunk_Button.setGeometry(QtCore.QRect(390, 220, 131, 21))
+        self.UpdateAllDristpunk_Button.setMinimumSize(QtCore.QSize(0, 0))
+        self.UpdateAllDristpunk_Button.setMaximumSize(QtCore.QSize(99999, 9999))
+        font = QtGui.QFont()
+        font.setFamily("ascii")
+        font.setPointSize(12)
+        self.UpdateAllDristpunk_Button.setFont(font)
+        self.UpdateAllDristpunk_Button.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(129, 80, 0);\n"
+"    border-radius:10px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color:rgb(162, 100, 0);\n"
+"}")
+        self.UpdateAllDristpunk_Button.setObjectName("UpdateAllDristpunk_Button")
+        self.UpdateModsDristpunk_Button = QtWidgets.QPushButton(parent=self.frame)
+        self.UpdateModsDristpunk_Button.setGeometry(QtCore.QRect(390, 250, 131, 21))
+        self.UpdateModsDristpunk_Button.setMinimumSize(QtCore.QSize(0, 0))
+        self.UpdateModsDristpunk_Button.setMaximumSize(QtCore.QSize(99999, 9999))
+        font = QtGui.QFont()
+        font.setFamily("ascii")
+        font.setPointSize(12)
+        self.UpdateModsDristpunk_Button.setFont(font)
+        self.UpdateModsDristpunk_Button.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(129, 80, 0);\n"
+"    border-radius:10px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color:rgb(162, 100, 0);\n"
+"}")
+        self.UpdateModsDristpunk_Button.setObjectName("UpdateModsDristpunk_Button")
+        self.label_3 = QtWidgets.QLabel(parent=self.frame)
+        self.label_3.setGeometry(QtCore.QRect(0, 320, 61, 16))
+        self.label_3.setStyleSheet("background-color: none")
+        self.label_3.setObjectName("label_3")
+        self.widget_2 = QtWidgets.QWidget(parent=self.frame)
+        self.widget_2.setGeometry(QtCore.QRect(0, 0, 601, 41))
+        self.widget_2.setObjectName("widget_2")
+        self.label_2 = QtWidgets.QLabel(parent=self.widget_2)
+        self.label_2.setGeometry(QtCore.QRect(0, 0, 261, 31))
+        font = QtGui.QFont()
+        font.setFamily("ascii")
+        font.setPointSize(20)
+        font.setBold(True)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("color:rgb(255, 255, 255)")
+        self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.minButton = QtWidgets.QPushButton(parent=self.widget_2)
+        self.minButton.setGeometry(QtCore.QRect(519, 0, 41, 41))
+        font = QtGui.QFont()
+        font.setFamily("ascii")
+        font.setPointSize(12)
+        self.minButton.setFont(font)
+        self.minButton.setStyleSheet("QPushButton:hover {\n"
+"    background-color:rgb(162, 100, 0);\n"
+"}")
+        self.minButton.setObjectName("minButton")
+        self.closeButton = QtWidgets.QPushButton(parent=self.widget_2)
+        self.closeButton.setGeometry(QtCore.QRect(560, 0, 41, 41))
+        font = QtGui.QFont()
+        font.setFamily("ascii")
+        font.setPointSize(12)
+        self.closeButton.setFont(font)
+        self.closeButton.setStyleSheet("QPushButton:hover {\n"
+"    background-color:rgb(162, 100, 0);\n"
+"}")
+        self.closeButton.setObjectName("closeButton")
+        self.label_4 = QtWidgets.QLabel(parent=self.frame)
+        self.label_4.setGeometry(QtCore.QRect(80, 80, 151, 31))
+        font = QtGui.QFont()
+        font.setFamily("ascii")
+        font.setPointSize(12)
+        font.setBold(False)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_4.setObjectName("label_4")
 
         self.retranslateUi(Frame)
         QtCore.QMetaObject.connectSlotsByName(Frame)
@@ -146,5 +252,13 @@ class Ui_Frame(object):
         self.Event_Button.setText(_translate("Frame", "Ивент"))
         self.Dristpunk_Button.setText(_translate("Frame", "DristPunk3"))
         self.label.setText(_translate("Frame", "NickName:"))
-        self.label_2.setText(_translate("Frame", "DristLauncher"))
         self.ApplyNicknameButton.setText(_translate("Frame", "Ok"))
+        self.UpdateAllEvent_Button.setText(_translate("Frame", "Update All"))
+        self.UpdateModsEvent_Button.setText(_translate("Frame", "Update Mods"))
+        self.UpdateAllDristpunk_Button.setText(_translate("Frame", "Update All"))
+        self.UpdateModsDristpunk_Button.setText(_translate("Frame", "Update Mods"))
+        self.label_3.setText(_translate("Frame", "alpha-0.0.3"))
+        self.label_2.setText(_translate("Frame", "DristLauncher"))
+        self.minButton.setText(_translate("Frame", "-"))
+        self.closeButton.setText(_translate("Frame", "🞪"))
+        self.label_4.setText(_translate("Frame", ""))

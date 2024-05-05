@@ -4,6 +4,7 @@ import random
 import string
 import uuid
 
+
 def generate_cracked_uid():
     # Read data from the JSON file
     file_path = 'data/nickname.json'
@@ -15,7 +16,7 @@ def generate_cracked_uid():
         # Generate a new UUID
         uid = uuid.uuid4().hex
         data1["User-info"][0]["UUID"] = str(uid)
-           # Write the updated data back to the JSON file
+        # Write the updated data back to the JSON file
         with open(file_path, 'w') as js_set:
             json.dump(data1, js_set, indent=4)
 

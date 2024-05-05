@@ -1,6 +1,7 @@
 import os
 import subprocess
 
+
 def folder_open():
     # Открывает директорию кода
     current_directory = os.getcwd()

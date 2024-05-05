@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 import random
 
+
 def start_minecraft_event():
     print("\n Start Launch Minecraft")
     minecraft_directory = 'minecraft_event/'
@@ -42,7 +43,7 @@ def start_minecraft_event():
             "uuid": data1["User-info"][0]["UUID"],
             "token": "",
             "jvmArguments": [],
-            "executablePath": os.path.realpath(shutil.which("java")), # The path to the java executable
+            "executablePath": os.path.realpath(shutil.which("java")),  # The path to the java executable
             "gameDirectory": ""
             # "executablePath" : executablePath
         }
@@ -50,7 +51,6 @@ def start_minecraft_event():
     else:
         print("Файл 'data/nickname.json' не найден.")
         return  # Выйти из функции, так как нет необходимых данных для запуска Minecraft
-
 
     # __________________________________
     file_path2 = 'data/config.json'
@@ -91,7 +91,6 @@ def start_minecraft_event():
         "setMax": set_max
     }
 
-
     destination_folder = 'minecraft_event/'
     forge_version = minecraft_launcher_lib.forge.find_forge_version(f"{version_minecraft_on_website}")
     print(forge_version)
@@ -109,7 +108,6 @@ def start_minecraft_event():
         f"{version_minecraft_on_website}-{mods_loader_version_on_website}-{version_loader_on_website}",
         minecraft_directory, options)
     print(f'Minecraft command OK: {minecraft_command}')
-
 
     try:
         # Запуск Minecraft
@@ -153,7 +151,7 @@ def start_minecraft_dristpunk():
             "uuid": data1["User-info"][0]["UUID"],
             "token": "",
             "jvmArguments": [],
-            "executablePath": os.path.realpath(shutil.which("java")), # The path to the java executable
+            "executablePath": os.path.realpath(shutil.which("java")),  # The path to the java executable
             "gameDirectory": ""
             # "executablePath" : executablePath
         }
@@ -161,7 +159,6 @@ def start_minecraft_dristpunk():
     else:
         print("Файл 'data/nickname.json' не найден.")
         return  # Выйти из функции, так как нет необходимых данных для запуска Minecraft
-
 
     # __________________________________
     file_path2 = 'data/config.json'
@@ -202,7 +199,6 @@ def start_minecraft_dristpunk():
         "setMax": set_max
     }
 
-
     destination_folder = 'minecraft_dristpunk/'
     forge_version = minecraft_launcher_lib.forge.find_forge_version(f"{version_minecraft_on_website}")
     print(forge_version)
@@ -221,12 +217,8 @@ def start_minecraft_dristpunk():
         minecraft_directory, options)
     print(f'Minecraft command OK: {minecraft_command}')
 
-
     try:
         # Запуск Minecraft
         subprocess.Popen(minecraft_command)
     except Exception as e:
         print(f"Ошибка при запуске Minecraft: {e}")
-
-
-
